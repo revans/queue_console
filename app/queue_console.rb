@@ -2,6 +2,6 @@ require 'sinatra/base'
 
 class QueueConsole < Sinatra::Base
   get '/' do
-    'QueueConsole'
+    haml :index, :format => :html5
   end
 end

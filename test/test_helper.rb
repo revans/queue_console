@@ -4,6 +4,9 @@ require 'rack/test'
 
 ENV['RACK_ENV'] = 'test'
 
-class MiniTest::Unit::TestCase
+module TestSupport
   include Rack::Test::Methods
+  def app
+    QueueConsole
+  end
 end

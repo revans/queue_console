@@ -2,9 +2,7 @@ require 'test_helper'
 require_relative '../../app/queue_console'
 
 class QueueConsoleTest < MiniTest::Unit::TestCase
-  def app
-    QueueConsole
-  end
+  include TestSupport
 
   def test_root_request
     get '/'
