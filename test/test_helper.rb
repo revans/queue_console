@@ -7,6 +7,6 @@ ENV['RACK_ENV'] = 'test'
 module TestSupport
   include Rack::Test::Methods
   def app
-    QueueConsole
+    QueueConsole::Server.new
   end
 end
