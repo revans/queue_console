@@ -6,6 +6,6 @@ end
 
 class QueueConsole < Sinatra::Base
   get '/' do
-    haml :index, :format => :html5
+    haml :index
   end
 end
