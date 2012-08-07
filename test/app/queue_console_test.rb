@@ -7,6 +7,6 @@ class QueueConsoleTest < MiniTest::Unit::TestCase
   def test_root_request
     get '/'
     last_response.ok?.must_equal true
-    last_response.body.must_equal 'QueueConsole'
+    last_response.body.strip.must_equal '<h1>Hello World</h1>'
   end
 end
