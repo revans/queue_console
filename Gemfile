@@ -7,3 +7,7 @@ gem 'queue_classic', '~> 2.0.1'
 group :test do
   gem 'minitest'
 end
+
+group :test, :development do
+  gem 'shotgun'
+end
