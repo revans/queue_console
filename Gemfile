@@ -7,6 +7,7 @@ gem 'haml'
 
 group :test do
   gem 'minitest'
+  gem 'turn'
 end
 
 group :test, :development do

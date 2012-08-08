@@ -1,0 +1,21 @@
+%h2
+  Jobs
+  %small 
+    %em (#{@job_count} job in the queue)
+
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Queue Name
+      %th Job (class to be executed)
+      %th Args
+      %th Queue On
+
+  %tbody
+    - @jobs.each do |job|
+      %tr
+        %td= job['q_name']
+        %td= job['method']
+        %td= job['args']
+        %td= to_time(job['locked_at'])

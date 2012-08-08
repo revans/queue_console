@@ -5,6 +5,22 @@
     %meta{ content:  "", name: "description" }
     %meta{ content: "", name: "author" }
     %link{ href: "http://creativecommons.org/licenses/by/3.0/", rel: "license", title: "Creative Commons Attribution 3.0 Unported License" }
-    %link{ href: "/css/screen.css", media: "screen", rel: "stylesheet" }
+    %link{ media: 'screen', rel: 'stylesheet', href: "#{u 'css/bootstrap.min.css'}" }
+    %link{ media: 'screen', rel: 'stylesheet', href: "#{u 'css/bootstrap-responsive.min.css'}" }
   %body
-    = yield
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a{ class: 'brand', href: '#' }
+            Queue Console
+          %ul.nav
+            %li 
+              %a{ href: '/overview' } Overview
+            %li 
+              %a{ href: '/queues' } Queues
+            %li 
+              %a Workers
+            %li 
+              %a Failed
+    .container{ style: 'margin-top: 50px;' }
+      = yield

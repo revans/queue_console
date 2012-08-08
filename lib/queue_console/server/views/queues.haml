@@ -1,0 +1,11 @@
+%h2 Queues
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Queue Name
+
+  %tbody
+    - @queue_names.each do |name|
+      %tr
+        %td= name['q_name']
